@@ -1,4 +1,4 @@
-# webapp-sns (예은)
+# webapp-sns 
 ## 목표
 - 웹 애플리케이션 제작, 동작 과정 이해
 - 백엔드 프레임워크, 기술스택(Spring, Java, JPA, SQL) 익히기
