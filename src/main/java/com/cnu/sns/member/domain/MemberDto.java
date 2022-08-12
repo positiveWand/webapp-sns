@@ -1,12 +1,10 @@
-package com.cnu.sns.chat;
+package com.cnu.sns.member.domain;
 
-import com.cnu.sns.member.Member;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
 import java.time.LocalDate;
 
 @Data
@@ -17,7 +15,7 @@ public class MemberDto {
     private String id;
     private String mpassword;
     private LocalDate mbirthdate;
-    private Boolean gender;
+    private Character gender;
     private String mname;
     private String memail;
 

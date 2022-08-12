@@ -1,6 +1,5 @@
 package com.cnu.sns.member.domain;
 
-import com.cnu.sns.chat.MemberDto;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -17,7 +16,7 @@ import java.time.LocalDate;
 public class Member {
     @Id
     @Column(name = "MID", nullable = false, length = 20)
-    private String id;
+    private String mid;
 
     @Column(name = "MPASSWORD", nullable = false, length = 20)
     private String mpassword;
@@ -49,11 +48,11 @@ public class Member {
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
     public String getId() {
-        return id;
+        return mid;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String mid) {
+        this.mid = mid;
     }
 
     public String getMpassword() {
