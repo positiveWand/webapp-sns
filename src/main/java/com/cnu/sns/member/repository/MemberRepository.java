@@ -3,7 +3,6 @@ package com.cnu.sns.member.repository;
 import com.cnu.sns.member.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
 
 public interface MemberRepository extends JpaRepository<Member, String> {
     Member findById(String mid);

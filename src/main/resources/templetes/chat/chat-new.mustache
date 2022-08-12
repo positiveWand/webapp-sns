@@ -1,0 +1,47 @@
+<div class="input-group">
+    <span class="input-group-text">댓글</span>
+    <textarea class="form-control" aria-label="With textarea" id="new-chat"></textarea>
+
+    <!-- 히든 인풋 -->
+    {{#chatDto}}
+        <input type="hidden" id="chatroom" value="{{chatRoom}}">
+    {{/chatDto}}
+
+    <button type="button" class="btn btn-primary" id="chat-create-btn">작성</button>
+</div>
+
+
+<!--채팅 생성 이벤트-->
+<Script>
+{
+  // 채팅 생성 버튼 변수화 (id 기반)
+  const chatCreateBtn = document.querySelector("#chat-create-btn");
+  // 버튼 클릭 이벤트 감지
+  chatCreateBtn.addEventListener("click", function() {
+    // 새 채팅 객체 생성 (변치 않도록 const)
+    const chat = {
+      chatroom: document.querySelector("#chatroom").value
+      content: document.querySelector("#new-chat").value
+    };
+
+    const url = "/chatroom/" + chatroom.id + "/new_chat";
+
+    // fetch() - 비동기 통신을 위한 API
+    // 먼저 (채팅 저장을 위한) post 요청 보내자.
+    fetch(url, {
+      method: "post",
+      body: JSON.stringify(chat),
+      // 바디에 실어 보내는데, 그 내용이 뭔지 헤더에 적어 보내자
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(response => {
+      // http 응답 코드에 따른 메시지 출력해보기
+      const msg = (response.ok) ? "채팅 생성 완료" : "채팅 생성 실패";
+      alert(msg);
+      // 현재 페이지 새로고침
+      window.location.reload();
+    });
+  });
+}
+</script>
