@@ -54,5 +54,4 @@ public class ChatServiceImpl implements ChatService{
         ChatRoom chatRoom = chatRoomRepository.findById(room_number).orElse(null);
         return ChatRoomDto.toDto(chatRoom);
     }
-
 }
