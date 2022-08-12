@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div id="chat-list">
+    {{#chatDtoList}}
+        <div class="card m-2">
+            <div class="card-header">
+                김OO
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>{{content}}</p>
+                    <footer class="blockquote-footer">chat-time</footer>
+                </blockquote>
+            </div>
+        </div>
+    {{/chatDtoList}}
+</div>
+

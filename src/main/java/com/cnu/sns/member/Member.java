@@ -1,5 +1,9 @@
 package com.cnu.sns.member;
 
+import com.cnu.sns.chat.MemberDto;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,6 +11,8 @@ import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "MEMBER")
 public class Member {
     @Id
@@ -27,6 +33,20 @@ public class Member {
 
     @Column(name = "MEMAIL", length = 40)
     private String memail;
+
+    //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    // 경방아 이거 내가 추가했어.. (담부터는 안 건들게 ㅠㅅㅠ)
+    // Dto를 Entity로 바꿔주는 건데
+    // 당장 필요할 것 같아서 딱 이것만 넣을게!!
+    public static Member createMember(MemberDto memberDto) {
+        return new Member(memberDto.getId(),
+                memberDto.getMpassword(),
+                memberDto.getMbirthdate(),
+                memberDto.getGender(),
+                memberDto.getMname(),
+                memberDto.getMemail());
+    }
+    //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
     public String getId() {
         return id;
