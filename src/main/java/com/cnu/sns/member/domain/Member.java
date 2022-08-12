@@ -1,4 +1,4 @@
-package com.cnu.sns.member;
+package com.cnu.sns.member.domain;
 
 import com.cnu.sns.chat.MemberDto;
 import lombok.AllArgsConstructor;
@@ -26,7 +26,7 @@ public class Member {
     private LocalDate mbirthdate;
 
     @Column(name = "GENDER")
-    private Boolean gender;
+    private Character gender;
 
     @Column(name = "MNAME", nullable = false, length = 20)
     private String mname;
@@ -72,11 +72,11 @@ public class Member {
         this.mbirthdate = mbirthdate;
     }
 
-    public Boolean getGender() {
+    public Character getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 

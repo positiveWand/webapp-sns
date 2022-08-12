@@ -1,16 +1,18 @@
-package com.cnu.sns.member;
+package com.cnu.sns.member.service;
+
+import com.cnu.sns.member.domain.Member;
 
 import java.util.List;
 
 public interface MemberService {
-    boolean joinMember(Member newMember);
-    Member getMember(Long memberId);
-    boolean updateMember(Member member);
-    boolean deleteMember(Long memberId);
+    Member joinMember(Member newMember);
+    Member getMember(String memberId);
+    Member updateMember(Member member);
+    int deleteMember(String memberId);
 
-    boolean followMember(Long followerId, Long followeeId);
-    boolean unfollowMember(Long followerId, Long followeeId);
+    int followMember(String followerId, String followeeId);
+    int unfollowMember(String followerId, String followeeId);
 
-    List<Member> getFollowers(Long memberId);
-    List<Member> getFollowees(Long memberId);
+    List<Member> getFollowers(String memberId);
+    List<Member> getFollowees(String memberId);
 }
