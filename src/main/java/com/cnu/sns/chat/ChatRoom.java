@@ -1,6 +1,7 @@
 package com.cnu.sns.chat;
 
-import com.cnu.sns.member.Member;
+import com.cnu.sns.member.domain.Member;
+import com.cnu.sns.member.domain.Member;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

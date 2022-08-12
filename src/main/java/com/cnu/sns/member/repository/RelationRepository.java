@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface RelationRepository extends JpaRepository<Relation, RelationId> {
-    List<Relation> findByFollowee(String followeeId);
-    List<Relation> findByFollower(String followerId);
+    List<Relation> findByIdFollowee(String followeeId);
+    List<Relation> findByIdFollower(String followerId);
 }

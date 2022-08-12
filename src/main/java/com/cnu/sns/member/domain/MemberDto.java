@@ -22,7 +22,7 @@ public class MemberDto {
 
     public static MemberDto toDto(Member member) {
         return new MemberDto(
-                member.getId(),
+                member.getMid(),
                 member.getMpassword(),
                 member.getMbirthdate(),
                 member.getGender(),

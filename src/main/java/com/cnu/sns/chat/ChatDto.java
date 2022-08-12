@@ -1,6 +1,6 @@
 package com.cnu.sns.chat;
 
-import com.cnu.sns.member.Member;
+import com.cnu.sns.member.domain.Member;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -23,7 +23,7 @@ public class ChatDto {
         return new ChatDto(chat.getId(),
                 chat.getChatRoom().getId(),
                 chat.getContent(),
-                chat.getChatMember().getId(),
+                chat.getChatMember().getMid(),
                 chat.getChatTime());
     }
 }

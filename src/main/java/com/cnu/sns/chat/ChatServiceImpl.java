@@ -1,6 +1,7 @@
 package com.cnu.sns.chat;
 
-import com.cnu.sns.member.Member;
+import com.cnu.sns.member.domain.Member;
+import com.cnu.sns.member.domain.MemberDto;
 import com.cnu.sns.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
