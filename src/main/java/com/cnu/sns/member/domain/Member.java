@@ -1,4 +1,4 @@
-package com.cnu.sns.member;
+package com.cnu.sns.member.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +20,7 @@ public class Member {
     private LocalDate mbirthdate;
 
     @Column(name = "GENDER")
-    private Boolean gender;
+    private Character gender;
 
     @Column(name = "MNAME", nullable = false, length = 20)
     private String mname;
@@ -52,11 +52,11 @@ public class Member {
         this.mbirthdate = mbirthdate;
     }
 
-    public Boolean getGender() {
+    public Character getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 
