@@ -1,7 +1,7 @@
 package com.cnu.sns.chat.controller;
 
 import com.cnu.sns.chat.ChatDto;
-import com.cnu.sns.chat.ChatServiceImpl;
+import com.cnu.sns.chat.ChatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class ChatController {
-    private final ChatServiceImpl chatService;
+    private final ChatService chatService;
 
     @PostMapping("/chatroom/{room_number}/new_chat")
     public ResponseEntity<ChatDto> create(@PathVariable Long room_number,

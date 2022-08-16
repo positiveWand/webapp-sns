@@ -8,7 +8,6 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.transaction.Transactional;
@@ -64,6 +63,7 @@ public class chatServiceTest {
         LocalDate date1 = LocalDate.of(1999, 3, 14);
         LocalDate date2 = LocalDate.of(1998, 5, 24);
         LocalDate date3 = LocalDate.of(1993, 1, 26);
+
         MemberDto memDto1 = new MemberDto("Id_1", "1234", date1, 'M', "김예니", "kye@gmail.com");
         MemberDto memDto2 = new MemberDto("Id_2", "1234", date2, 'F', "김옌", "kyl@gmail.com");
         MemberDto memDto3 = new MemberDto("ID_3", "1234", date3, 'F', "김예은", "kss@gmail.com");

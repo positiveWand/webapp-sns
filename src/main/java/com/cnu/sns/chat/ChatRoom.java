@@ -1,16 +1,13 @@
 package com.cnu.sns.chat;
 
 import com.cnu.sns.member.domain.Member;
-import com.cnu.sns.member.domain.Member;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 
 
 @Entity

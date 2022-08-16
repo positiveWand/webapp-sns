@@ -31,7 +31,7 @@ public class Chat {
     @Column
     private String content;
 
-    @ManyToOne(targetEntity=Member.class, fetch=FetchType.EAGER)
+    @ManyToOne(targetEntity= Member.class, fetch=FetchType.EAGER)
     @JoinColumn(name="mid")
     private Member chatMember;
 
