@@ -47,11 +47,11 @@ public class Member {
     }
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
-    public String getId() {
+    public String getMid() {
         return mid;
     }
 
-    public void setId(String mid) {
+    public void setMid(String mid) {
         this.mid = mid;
     }
 

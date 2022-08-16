@@ -34,8 +34,8 @@ public class chatServiceTest {
             // given1 : DB에 회원데이터 존재
             LocalDate date1 = LocalDate.of(1999, 3, 14);
             LocalDate date2 = LocalDate.of(1998, 5, 24);
-            MemberDto memDto1 = new MemberDto("testId_1", "1234", date1, 'F', "김예니", "kye@gmail.com");
-            MemberDto memDto2 = new MemberDto("testId_2", "1234", date2, 'M', "김옌", "kyl@gmail.com");
+            MemberDto memDto1 = new MemberDto("testId_1", "1234", date1, 'M', "김예니", "kye@gmail.com");
+            MemberDto memDto2 = new MemberDto("testId_2", "1234", date2, 'F', "김옌", "kyl@gmail.com");
             memberRepository.saveAll(Arrays.asList(
                     Member.createMember(memDto1),
                     Member.createMember(memDto2)));
@@ -63,8 +63,9 @@ public class chatServiceTest {
         LocalDate date1 = LocalDate.of(1999, 3, 14);
         LocalDate date2 = LocalDate.of(1998, 5, 24);
         LocalDate date3 = LocalDate.of(1993, 1, 26);
-        MemberDto memDto1 = new MemberDto("Id_1", "1234", date1, 'F', "김예니", "kye@gmail.com");
-        MemberDto memDto2 = new MemberDto("Id_2", "1234", date2, 'M', "김옌", "kyl@gmail.com");
+
+        MemberDto memDto1 = new MemberDto("Id_1", "1234", date1, 'M', "김예니", "kye@gmail.com");
+        MemberDto memDto2 = new MemberDto("Id_2", "1234", date2, 'F', "김옌", "kyl@gmail.com");
         MemberDto memDto3 = new MemberDto("ID_3", "1234", date3, 'F', "김예은", "kss@gmail.com");
         //▼memberService.join
         memberRepository.saveAll(Arrays.asList(

@@ -1,5 +1,6 @@
 package com.cnu.sns.chat;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class ChatRoomDto {
 
     public static ChatRoomDto toDto(ChatRoom chatRoom) {
         return new ChatRoomDto(chatRoom.getId(),
-                chatRoom.getMember1().getId(),
-                chatRoom.getMember2().getId());
+                chatRoom.getMember1().getMid(),
+                chatRoom.getMember2().getMid());
     }
 }
