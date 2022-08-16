@@ -1,6 +1,6 @@
 package com.cnu.sns.chat;
 
-import com.cnu.sns.member.Member;
+import com.cnu.sns.member.domain.Member;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -31,7 +31,7 @@ public class Chat {
     @Column
     private String content;
 
-    @ManyToOne(targetEntity=Member.class, fetch=FetchType.EAGER)
+    @ManyToOne(targetEntity= Member.class, fetch=FetchType.EAGER)
     @JoinColumn(name="mid")
     private Member chatMember;
 

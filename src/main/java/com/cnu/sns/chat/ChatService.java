@@ -1,6 +1,6 @@
 package com.cnu.sns.chat;
 
-import com.cnu.sns.member.Member;
+import com.cnu.sns.member.domain.MemberDto;
 
 import java.util.List;
 
