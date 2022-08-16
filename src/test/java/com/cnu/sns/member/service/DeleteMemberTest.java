@@ -6,51 +6,32 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 
 @SpringBootTest
 @Transactional
-public class MemberServiceTest {
+public class DeleteMemberTest {
     @Autowired
     MemberService memberService;
     @Autowired
     MemberRepository memberRepository;
 
     @Test
-    void member_toString() {
-        System.out.println(new Member("testid", "testpass", LocalDate.now(), 'M', "테스트", "test@example.com"));
+    public void deletePresentMember() {
+        Member mem1 = new Member("testid", "testpass", LocalDate.now(), 'M', "테스트", "test@example.com");
+        memberRepository.save(mem1);
+
+        int result = memberService.deleteMember("testid");
+
+        Assertions.assertEquals(1, result);
     }
 
     @Test
-    void getMember() {
+    public void deleteAbsentMember() {
+        int result = memberService.deleteMember("testid");
 
-    }
-    @Test
-    void updateMember() {
-
-    }
-    @Test
-    void deleteMember() {
-
-    }
-    @Test
-    void followMember() {
-
-    }
-    @Test
-    void unfollowMember() {
-
-    }
-    @Test
-    void getFollowers() {
-
-    }
-    @Test
-    void getFollowees() {
-
+        Assertions.assertEquals(0, result);
     }
 }

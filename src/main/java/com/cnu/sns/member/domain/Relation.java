@@ -19,6 +19,7 @@ public class Relation {
     private Member followee;
 
     public Relation(Member follower, Member followee) {
+        this.id = new RelationId(follower.getMid(), followee.getMid());
         this.follower = follower;
         this.followee = followee;
     }

@@ -3,11 +3,9 @@ package com.cnu.sns.member.domain;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 @AllArgsConstructor
@@ -95,4 +93,16 @@ public class Member {
         this.memail = memail;
     }
 
+    @Override
+    public String toString() {
+        return "Member = { mid: " +mid+ ", mpassword: " +mpassword+ ", mbirthdate: " +mbirthdate+ ", gender: " +gender+ ", mname: " +mname+ ", memail: " +memail;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return Objects.equals(mid, member.mid) && Objects.equals(mpassword, member.mpassword) && Objects.equals(mbirthdate, member.mbirthdate) && Objects.equals(gender, member.gender) && Objects.equals(mname, member.mname) && Objects.equals(memail, member.memail);
+    }
 }
